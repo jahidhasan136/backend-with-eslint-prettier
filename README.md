@@ -1,6 +1,6 @@
 # ESLint + Prettier Setup (TypeScript + Node)
 
-0) Install Dependencies
+0. Install Dependencies
 
 ```bash
 npm i -D eslint @eslint/js typescript-eslint eslint-config-prettier eslint-plugin-prettier prettier
@@ -8,19 +8,19 @@ npm i -D eslint @eslint/js typescript-eslint eslint-config-prettier eslint-plugi
 npm i -D globals
 ```
 
-1) Create: eslint.config.js
+1. Create: eslint.config.js
 
 ```js
-import js from "@eslint/js";
-import tseslint from "typescript-eslint";
-import prettierPlugin from "eslint-plugin-prettier";
-import prettierConfig from "eslint-config-prettier";
-import globals from "globals";
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import prettierPlugin from 'eslint-plugin-prettier';
+import prettierConfig from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default [
   // Ignore build output
   {
-    ignores: ["dist/**", "node_modules/**"],
+    ignores: ['dist/**', 'node_modules/**'],
   },
 
   // Base JS recommended rules
@@ -31,10 +31,10 @@ export default [
 
   // Your project rules
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
         ...globals.node,
       },
@@ -68,7 +68,7 @@ export default [
 ];
 ```
 
-2) Create: .prettierrc.json
+2. Create: .prettierrc.json
 
 ```json
 {
@@ -80,14 +80,14 @@ export default [
 }
 ```
 
-3) Create: .prettierignore
+3. Create: .prettierignore
 
 ```txt
 dist
 node_modules
 ```
 
-4) Update: package.json
+4. Update: package.json
 
 ```json
 "scripts": {
@@ -102,7 +102,7 @@ node_modules
 }
 ```
 
-5) Run command
+5. Run command
 
 ```bash
 npm run lint
@@ -112,7 +112,7 @@ npm run lint:fix
 npm run format
 ```
 
-6) Recommanded-Create: .editorconfig
+6. Recommanded-Create: .editorconfig
 
 ```ini
 root = true
@@ -126,7 +126,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 ```
 
-7) .gitignore
+7. .gitignore
 
 ```txt
 .env
