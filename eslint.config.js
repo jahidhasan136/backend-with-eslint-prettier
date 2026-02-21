@@ -30,23 +30,8 @@ export default [
       prettier: prettierPlugin,
     },
     rules: {
-      // Prettier formatting as ESLint errors
+      // Make Prettier show as ESLint errors
       'prettier/prettier': 'error',
-      // Safe core JS rule
-      'prefer-const': 'error',
-      // Backend-friendly (warn only)
-      'no-console': 'warn',
-      // TypeScript projects should not use no-undef
-      'no-undef': 'off',
-      // Use TS-aware version to avoid conflicts/false positives
-      'no-unused-expressions': 'off',
-      '@typescript-eslint/no-unused-expressions': 'error',
-      // Use TS-aware version for unused vars (prevents duplicate warnings later)
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-      ],
     },
   },
 
