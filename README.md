@@ -92,8 +92,8 @@ node_modules
 ```json
 "scripts": {
   "build": "tsc",
-  "start": "node ./dist/app.js",
-  "dev": "node --watch ./dist/app.js",
+  "start": "node ./dist/server.js",
+  "dev": "node --watch ./dist/server.js",
   "lint": "eslint .",
   "lint:fix": "eslint . --fix",
   "format": "prettier . --write",
