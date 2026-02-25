@@ -91,16 +91,17 @@ node_modules
 4. Update: package.json
 
 ```json
-"scripts": {
-  "build": "tsc",
-  "start": "node ./dist/server.js",
-  "dev": "node --watch ./dist/server.js",
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
-  "format": "prettier . --write",
-  "format:check": "prettier . --check",
-  "test": "echo \"Error: no test specified\" && exit 1"
-}
+  "scripts": {
+    "start:prod": "node ./dist/server.js",
+    "start:dev": "tsx watch ./src/server.ts",
+    "build": "tsc",
+    "dev": "node --watch ./dist/server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
 ```
 
 5. Run command
